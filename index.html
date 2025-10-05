@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Skills Test</title>
+    <style>
+       body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/008/660/558/non_2x/organic-food-background-hand-drawn-concept-free-vector.jpg');
+          background-size: cover;           
+        background-position: center center; 
+        background-repeat: no-repeat;     
+           background-attachment: fixed; 
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            margin: 0; 
+        }
+        .container {
+       background: rgba(229, 147, 92, 0.95);
+       padding: 25px 30px;
+       border-radius: 12px;
+       box-shadow: 0 4px 12px rgba(250, 248, 248, 0.1);
+       width: 600px;
+       min-height: 500px;  
+       display: flex;
+       flex-direction: column;
+        justify-content: flex-start;
+        }
+        h1 {
+            text-align: center;
+            color: #843614;
+            margin-bottom: 20px;
+            font-family: 'Pirata One', cursive;
+        }
+        h3 {
+            color: #843614;
+            margin-top: 15px;
+            font-family: 'Pirata One', cursive;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #36012d;
+            border-radius: 6px;
+           font-family: 'Pirate Onet', cursive;  
+           font-size: 18px;
+          }
+        button {
+            width: 100%;
+            background: #321901;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #orderSummary {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arak's Prime House</h1>
+
+        <h3>Menu:</h3>
+        <form id="orderForm">
+            <input type="checkbox" id="Wagyu Beef" value="Wagyu Beef"> Wagyu Beef<br>
+            <input type="checkbox" id="Steak and Eggs" value="Steak and Eggs">Steak and Eggs<br>
+            <input type="checkbox" id="Grilled Salmon" value="Grilled Salmon">Grilled Salmon<br>
+            <input type="checkbox" id="New Your Cheesecake" value="New Your Cheesecake">New Your Cheesecake<br>
+            <input type="checkbox" id="Clubhouse" value="Clubhouse">Clubhouse<br>
+            <input type="checkbox" id="Fruit Shakes" value="Fruit Shakes">Fruit Shakes<br>
+        </form>
+
+        <h3>Customer Details:</h3>
+        <input type="text" id="Name" placeholder="Enter your name">
+        <input type="text" id="Address" placeholder="Enter your address">
+        <input type="text" id="Contact" placeholder="Enter your contact number">
+        <button type="submit" py-click="Create_Order">Create Order</button>
+
+        <h3>Order Summary:</h3>
+        <div id="orderSummary">No order</div>
+    </div>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
